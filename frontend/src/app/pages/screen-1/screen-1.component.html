@@ -1,1 +1,10 @@
-<p>screen-1 works!</p>,
+<app-card>
+  <input class="input" placeholder="Frase ex: juan" />
+  <p-dropdown
+    [options]="cities"
+    [(ngModel)]="selectedCity"
+    optionLabel="name"
+    [showClear]="true"
+    placeholder="Select a City" />
+</app-card>
+

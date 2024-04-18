@@ -6,7 +6,7 @@
     <h1 class="text-xl font-bold">{{ "title" | translate }}</h1>
   </div>
   @if (canBeRendered) {
-    <p-steps [model]="items" [readonly]="false"></p-steps>
+    <p-steps [model]="items" [readonly]="false" />
   }
   <router-outlet />
 </main>

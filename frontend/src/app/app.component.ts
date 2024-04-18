@@ -4,7 +4,7 @@ import { TranslateService, TranslateModule } from "@ngx-translate/core";
 import { StepsModule } from "primeng/steps";
 import { MenuComponent } from "./components";
 import { MenuItem } from "primeng/api";
-import { ROUTES_TO_HDE_STEPPER, STEPPER_OPTIONS } from "./constants";
+import { ROUTES_TO_HIDE_STEPPER, STEPPER_OPTIONS } from "./constants";
 import { RoutesEnum } from "./enums";
 
 @Component({
@@ -29,7 +29,7 @@ export class AppComponent {
 
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.canBeRendered = Boolean(!ROUTES_TO_HDE_STEPPER.includes(event.url.split("/")[1] as RoutesEnum));
+        this.canBeRendered = Boolean(!ROUTES_TO_HIDE_STEPPER.includes(event.url.split("/")[1] as RoutesEnum));
       }
     });
   }
