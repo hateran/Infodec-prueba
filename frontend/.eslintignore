@@ -1,0 +1,19 @@
+# compiled output
+dist/
+node_modules/
+.angular/
+
+environments/
+svg/
+
+# Test files
+./**/*.spec.ts
+
+# Other files
+*.json
+*.d.ts
+*.html
+*.ico
+
+main.ts
+tailwind.config.js

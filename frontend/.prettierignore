@@ -1,0 +1,14 @@
+# compiled output
+dist/
+node_modules/
+.angular/
+
+env/
+
+# Test files
+./**/*.spec.ts
+
+# Other files
+*.json
+*.d.ts
+*.ico
