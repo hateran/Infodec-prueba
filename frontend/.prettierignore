@@ -12,3 +12,6 @@ env/
 *.json
 *.d.ts
 *.ico
+
+!es.json
+!de.json

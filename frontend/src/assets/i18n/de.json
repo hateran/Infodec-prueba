@@ -1,3 +1,8 @@
 {
-    "hello": "Hallo"
+  "title": "Infodec Test",
+  "sidebar": {
+    "title": "Menü",
+    "language": "Sprache",
+    "history": "Aufzeichnen"
+  }
 }

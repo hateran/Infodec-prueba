@@ -1,0 +1,11 @@
+:host {
+  ::ng-deep .p-sidebar {
+    @apply bg-slate-950 text-white;
+
+    &-header {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+

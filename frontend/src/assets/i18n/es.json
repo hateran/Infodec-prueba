@@ -1,3 +1,8 @@
 {
-    "hello": "Hola"
+  "title": "Infodec Prueba",
+  "sidebar": {
+    "title": "Menu",
+    "language": "Idioma",
+    "history": "Historial"
+  }
 }

@@ -1,0 +1,28 @@
+<p-sidebar class="bg-slate-950 text-white" [(visible)]="isOpened" (onHide)="onHide()">
+  <ng-template pTemplate="header">
+    <h2 class="text-lg font-semibold">{{ "sidebar.title" | translate }}</h2>
+  </ng-template>
+  <div class="mt-2 flex flex-col gap-4">
+    @for (item of options; track $index) {
+      <button class="flex items-center gap-4 hover:text-gray-200" (click)="handleClick(item, $event)">
+        <i [class]="item.icon"></i>
+        <span>{{ item.title | translate }}</span>
+      </button>
+    }
+  </div>
+</p-sidebar>
+
+<p-overlayPanel #languageOverlay>
+  <div class="flex flex-col gap-2">
+    @for (item of languages; track $index) {
+      <button
+        class="flex items-center gap-2 rounded overflow-hidden hover:opacity-75 disabled:opacity-50"
+        (click)="changeLanguage(item); languageOverlay.hide()"
+        [disabled]="currentLang === item.language">
+        <img class="object-contain w-6 h-6" [src]="item.flag" alt="lang" />
+        <span>{{ item.language | uppercase }}</span>
+      </button>
+    }
+  </div>
+</p-overlayPanel>
+

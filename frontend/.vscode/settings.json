@@ -3,5 +3,11 @@
         "infodec",
         "prueba",
         "tailwindcss"
-    ]
+    ],
+    "angular-schematics.schematicsDefaultOptions": {
+        "angular-*": {
+            "style": "scss",
+            "externalTemplate": true
+        }
+    }
 }
