@@ -1,6 +1,7 @@
 import { PrimeIcons } from "primeng/api";
 import { IMenuOption } from "../interfaces";
 import { MenuOptionsIdEnum } from "../enums";
+import { RoutesEnum } from "../../../enums";
 
 export const MENU_OPTIONS: IMenuOption[] = [
   {
@@ -12,6 +13,6 @@ export const MENU_OPTIONS: IMenuOption[] = [
     id: MenuOptionsIdEnum.HISTORY,
     title: "sidebar.history",
     icon: PrimeIcons.HISTORY,
-    link: "",
+    link: RoutesEnum.HISTORY,
   },
 ];

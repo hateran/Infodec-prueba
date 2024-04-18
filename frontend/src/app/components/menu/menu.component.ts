@@ -8,6 +8,7 @@ import { OverlayPanel, OverlayPanelModule } from "primeng/overlaypanel";
 import { ILanguage, IMenuOption } from "./interfaces";
 import { MENU_OPTIONS } from "./constants";
 import { LanguageEnum, MenuOptionsIdEnum } from "./enums";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-menu",
@@ -25,6 +26,8 @@ export class MenuComponent {
 
   private readonly translate = inject(TranslateService);
 
+  private readonly router = inject(Router);
+
   public onHide(): void {
     this.isOpenedChange.emit(false);
   }
@@ -35,7 +38,7 @@ export class MenuComponent {
         this.languageOverlay.toggle(event);
         break;
       case MenuOptionsIdEnum.HISTORY:
-        //navigate
+        this.router.navigate([link]);
         break;
 
       default:
