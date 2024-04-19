@@ -1,0 +1,44 @@
+:host {
+  ::ng-deep .p-steps .p-steps-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+
+    &::before {
+      border-top-width: 2px;
+      margin-top: calc(-1rem + 1px);
+    }
+
+    &::before {
+      content: " ";
+      border-top: 1px solid #e2e8f0;
+      width: 100%;
+      top: 80%;
+      left: 0;
+      display: block;
+      position: absolute;
+      margin-top: -1rem;
+    }
+
+    &:first-child::before {
+      width: calc(50% + 1rem);
+      transform: translateX(100%);
+    }
+
+    &:last-child::before {
+      width: 50%;
+    }
+  }
+
+  ::ng-deep .p-menuitem-link {
+    background-color: inherit;
+
+    &-active {
+      .p-steps-number {
+        background-color: #3b82f6;
+        color: white;
+      }
+    }
+  }
+}

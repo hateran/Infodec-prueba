@@ -1,8 +1,35 @@
+@import "../mixins";
+
+.input-container {
+  @apply relative;
+
+  &:has(.icon__left) {
+    .input {
+      @apply ps-10;
+    }
+  }
+
+  &:has(.icon__right) {
+    .input {
+      @apply pe-10;
+    }
+  }
+
+  .icon {
+    @apply absolute inset-y-0
+    flex items-center;
+
+    &__left {
+      @apply start-0 ps-3.5;
+    }
+
+    &__right {
+      @apply end-0 pe-3.5;
+    }
+  }
+}
+
 .input {
-  @apply bg-slate-700 w-full 
-  rounded-lg border border-gray-300 
-  px-4 py-3 focus:outline-none 
-  focus:ring-2 focus:ring-gray-700 
-  focus:ring-offset-2 
-  focus:ring-offset-gray-800;
+  @include common-styles();
+  @apply w-full;
 }

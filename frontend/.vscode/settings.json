@@ -9,5 +9,8 @@
             "style": "scss",
             "externalTemplate": true
         }
-    }
+    },
+    "conventionalCommits.scopes": [
+        "frontend"
+    ]
 }

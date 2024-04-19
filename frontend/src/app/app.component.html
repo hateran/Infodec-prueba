@@ -1,14 +1,16 @@
-<main class="relative p-8 w-full h-full bg-slate-900 text-white">
+<main class="relative p-8 w-full h-full max-w-[2200px] mx-auto">
   <div class="relative flex justify-center">
     <button class="absolute left-0 top-[15%]" (click)="isOpened = true">
       <i class="pi pi-align-justify"></i>
     </button>
     <h1 class="text-xl font-bold">{{ "title" | translate }}</h1>
   </div>
-  @if (canBeRendered) {
-    <p-steps [model]="items" [readonly]="false" />
-  }
-  <router-outlet />
+  <div class="flex flex-col gap-4 pt-4">
+    @if (canBeRendered) {
+      <p-steps [model]="items" [readonly]="false" />
+    }
+    <router-outlet />
+  </div>
 </main>
 
 <app-menu [(isOpened)]="isOpened" />

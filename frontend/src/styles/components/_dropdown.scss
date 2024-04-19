@@ -1,0 +1,6 @@
+@import "../mixins";
+
+.select {
+  @include common-styles();
+  @apply transition ease-in-out duration-150;
+}

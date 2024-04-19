@@ -1,1 +1,11 @@
-<p>screen-2 works!</p>,
+<app-card>
+  <h2 class="text-lg font-semibold text-center">{{ "routes.screen2.title" | translate }}</h2>
+  <div class="input-container">
+    <input class="input" type="number" min="0" placeholder="500.000">
+    <i class="icon icon__left pi pi-dollar"></i>
+  </div>
+  <div class="flex justify-between gap-4">
+    <button class="primary" (click)="navigateBack()">{{ "common.back" | translate }}</button>
+    <button class="primary" (click)="navigate()">{{ "common.next" | translate }}</button>
+  </div>
+</app-card>

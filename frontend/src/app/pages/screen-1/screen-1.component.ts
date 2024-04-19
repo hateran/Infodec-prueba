@@ -1,4 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
+import { Router } from "@angular/router";
+import { RoutesEnum } from "../../enums";
 
 @Component({
   selector: "app-screen-1",
@@ -6,15 +8,43 @@ import { Component } from "@angular/core";
   styleUrl: "./screen-1.component.scss",
 })
 export class Screen1Component {
-  public selectedCity: unknown;
+  private readonly router = inject(Router);
 
-  public get cities(): unknown[] {
+  public navigate(): void {
+    this.router.navigate([RoutesEnum.SCREEN_2]);
+  }
+
+  public get countries() {
     return [
-      { name: "New York", code: "NY" },
-      { name: "Rome", code: "RM" },
-      { name: "London", code: "LDN" },
-      { name: "Istanbul", code: "IST" },
-      { name: "Paris", code: "PRS" },
+      {
+        name: "Inglaterra",
+        translationKey: "England",
+      },
+      {
+        name: "Japon",
+        translationKey: "Japan",
+      },
+      {
+        name: "India",
+        translationKey: "India",
+      },
+      {
+        name: "Dinamarca",
+        translationKey: "Denmark",
+      },
+      {
+        name: "Colombia",
+        translationKey: "Colombia",
+      },
+    ];
+  }
+
+  public get cities() {
+    return [
+      {
+        name: "Pereira",
+        translationKey: "Pereira",
+      },
     ];
   }
 }

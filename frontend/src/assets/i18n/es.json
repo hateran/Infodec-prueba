@@ -4,5 +4,48 @@
     "title": "Menu",
     "language": "Idioma",
     "history": "Historial"
+  },
+  "routes": {
+    "screen1": {
+      "title": "Formulario de seleccion de paises y ciudades"
+    },
+    "screen2": {
+      "title": "Formulario de presupuesto (COP)"
+    },
+    "screen3": {
+      "title": "Resultado",
+      "selectedCountry": "Pais seleccionado",
+      "selectedCity": "Ciudad seleccionada",
+      "savings": "Presupuesto",
+      "weather": "Clima el día de hoy",
+      "localCurrency": "Moneda local",
+      "currencyExchange": "Cambio del presupuesto",
+      "currentChange": "Tasa de cambio aplicada"
+    }
+  },
+  "forms": {
+    "select": {
+      "countries": {
+        "placeholder": "Seleccione un pais"
+      },
+      "cities": {
+        "placeholder": "Seleccione una ciudad"
+      }
+    }
+  },
+  "countries": {
+    "England": "Inglaterra",
+    "Japan": "Japon",
+    "India": "India",
+    "Denmark": "Dinamarca",
+    "Colombia": "Colombia"
+  },
+  "cities": {
+    "Pereira": "Pereira"
+  },
+  "common": {
+    "next": "Siguiente",
+    "back": "Anterior",
+    "returnToStart": "Volver al inicio"
   }
 }

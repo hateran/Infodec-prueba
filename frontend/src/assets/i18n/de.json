@@ -4,5 +4,48 @@
     "title": "Menü",
     "language": "Sprache",
     "history": "Aufzeichnen"
+  },
+  "routes": {
+    "screen1": {
+      "title": "Formular zur Auswahl von Ländern und Städten"
+    },
+    "screen2": {
+      "title": "Budgetformular (COP)"
+    },
+    "screen3": {
+      "title": "Ergebnis",
+      "selectedCountry": "Ausgewähltes Land",
+      "selectedCity": "Ausgewählte Stadt",
+      "savings": "Haushalt",
+      "weather": "Das heutige Wetter",
+      "localCurrency": "Landeswährung",
+      "currencyExchange": "Änderung des Budgets",
+      "currentChange": "Angewendeter Wechselkurs"
+    }
+  },
+  "forms": {
+    "select": {
+      "countries": {
+        "placeholder": "Wählen Sie ein Land aus"
+      },
+      "cities": {
+        "placeholder": "Wählen Sie eine Stadt aus"
+      }
+    }
+  },
+  "countries": {
+    "England": "England",
+    "Japan": "Japan",
+    "India": "Indien",
+    "Denmark": "Dänemark",
+    "Colombia": "Kolumbien"
+  },
+  "cities": {
+    "Pereira": "Birnbaum"
+  },
+  "common": {
+    "next": "Weiter",
+    "back": "Vorherige",
+    "returnToStart": "Zurück zum Anfang"
   }
 }

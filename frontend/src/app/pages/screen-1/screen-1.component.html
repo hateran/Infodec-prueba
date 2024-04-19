@@ -1,10 +1,20 @@
 <app-card>
-  <input class="input" placeholder="Frase ex: juan" />
-  <p-dropdown
-    [options]="cities"
-    [(ngModel)]="selectedCity"
-    optionLabel="name"
-    [showClear]="true"
-    placeholder="Select a City" />
+  <h2 class="text-lg font-semibold text-center">{{ "routes.screen1.title" | translate }}</h2>
+  <div class="form-container">
+    <select class="select">
+      <option class="hidden" value="" selected>{{ "forms.select.countries.placeholder" | translate }}</option>
+      @for (item of countries; track $index) {
+        <option [value]="item.name">{{ "countries." + item.translationKey | translate }}</option>
+      }
+    </select>
+    <select class="select">
+      <option class="hidden" value="" selected>{{ "forms.select.cities.placeholder" | translate }}</option>
+      @for (item of cities; track $index) {
+        <option [value]="item.name">{{ "cities." + item.translationKey | translate }}</option>
+      }
+    </select>
+  </div>
+  <div class="flex justify-end mt-4">
+    <button class="primary" (click)="navigate()">{{ "common.next" | translate }}</button>
+  </div>
 </app-card>
-
