@@ -1,0 +1,15 @@
+runtime: php74
+
+service: prod
+# service: default
+
+handlers:
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
+
+env_variables:
+  APP_DEBUG: true
+  LOG_CHANNEL: stderr
+  APP_STORAGE: /tmp

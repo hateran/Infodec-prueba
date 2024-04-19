@@ -4,6 +4,7 @@
         "prueba"
     ],
     "conventionalCommits.scopes": [
-        "frontend"
+        "frontend",
+        "backend"
     ]
 }
