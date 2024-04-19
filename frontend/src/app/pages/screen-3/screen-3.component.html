@@ -3,31 +3,32 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
     <div class="form">
       <label for="country">{{ "routes.screen3.selectedCountry" | translate }}</label>
-      <input class="input" type="text" readonly value="value1" id="country" />
+      <input class="input" [(ngModel)]="selectedCountry" type="text" readonly id="country" />
     </div>
     <div class="form">
       <label for="city">{{ "routes.screen3.selectedCity" | translate }}</label>
-      <input class="input" type="text" readonly value="value2" id="city" />
+      <input class="input" [(ngModel)]="selectedCity" type="text" readonly id="city" />
     </div>
     <div class="form">
       <label for="saving">{{ "routes.screen3.savings" | translate }}</label>
-      <input class="input" type="text" readonly value="value3" id="saving" />
+      <input class="input" [(ngModel)]="savings" type="text" readonly id="saving" />
     </div>
     <div class="form">
       <label for="weather">{{ "routes.screen3.weather" | translate }}</label>
-      <input class="input" type="text" readonly value="value4" id="weather" />
+      <input class="input" [(ngModel)]="additionalData.weather" type="text" readonly id="weather" />
     </div>
     <div class="form">
       <label for="localCurrency">{{ "routes.screen3.localCurrency" | translate }}</label>
-      <input class="input" type="text" readonly value="value5" id="localCurrency" />
+      <input class="input" [(ngModel)]="additionalData.localCurrency" type="text" readonly id="localCurrency" />
     </div>
     <div class="form">
       <label for="currencyExchange">{{ "routes.screen3.currencyExchange" | translate }}</label>
-      <input class="input" type="text" readonly value="value6" id="currencyExchange" />
+      <input class="input" [(ngModel)]="additionalData.currencyExchange" type="text" readonly id="currencyExchange" />
     </div>
   </div>
   <p class="text-lg">
-    <strong class="font-semibold">{{ "routes.screen3.currentChange" | translate }}:</strong> Value7
+    <strong class="font-semibold">{{ "routes.screen3.currentChange" | translate }}:</strong>
+    {{ additionalData.exchangeRate }}
   </p>
   <div class="flex justify-between gap-4">
     <button class="primary" (click)="navigateBack()">{{ "common.back" | translate }}</button>

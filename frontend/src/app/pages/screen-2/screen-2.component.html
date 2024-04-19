@@ -1,7 +1,7 @@
 <app-card>
   <h2 class="text-lg font-semibold text-center">{{ "routes.screen2.title" | translate }}</h2>
   <div class="input-container">
-    <input class="input" type="number" min="0" placeholder="500.000">
+    <input class="input" [(ngModel)]="savings" type="number" min="0" placeholder="500.000">
     <i class="icon icon__left pi pi-dollar"></i>
   </div>
   <div class="flex justify-between gap-4">

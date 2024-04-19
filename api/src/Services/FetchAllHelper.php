@@ -9,6 +9,30 @@ use PDO;
 
 class FetchAllHelper
 {
+    public static function formatJoin(array $params, string $table, array $avoid = [], array $include_values = [])
+    {
+        foreach ($params as $key => $column) {
+            if ($key == "order_by") {
+                $params[$key] = $table . "." . $column;
+            }
+
+            if ($key != "page" && $key != "limit" && $key != "order" && $key != "order_by" && $key != "search_pattern" && $key != "start_at" && $key != "end_at") {
+                if (!array_key_exists($key, $avoid)) {
+                    $params[$table . "." . $key] = $column;
+                } else {
+                    $params[$avoid[$key]] = $column;
+                }
+                unset($params[$key]);
+            }
+        }
+
+        foreach ($include_values as $key => $value) {
+            $params[$key] = $value;
+        }
+
+        return $params;
+    }
+    
     public static function convertToType($value, $type)
     {
         switch ($type) {

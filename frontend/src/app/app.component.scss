@@ -29,6 +29,10 @@
     &:last-child::before {
       width: 50%;
     }
+
+    &.p-disabled {
+      @apply opacity-70;
+    }
   }
 
   ::ng-deep .p-menuitem-link {

@@ -1,20 +1,22 @@
 <app-card>
   <h2 class="text-lg font-semibold text-center">{{ "routes.screen1.title" | translate }}</h2>
   <div class="form-container">
-    <select class="select">
+    <select class="select" [ngModel]="selectedCountry" (ngModelChange)="handleCountryChange($event)">
       <option class="hidden" value="" selected>{{ "forms.select.countries.placeholder" | translate }}</option>
       @for (item of countries; track $index) {
-        <option [value]="item.name">{{ "countries." + item.translationKey | translate }}</option>
+        <option [value]="item.idCountry">{{ item.commonName }}</option>
       }
     </select>
-    <select class="select">
+    <select class="select" [(ngModel)]="selectedCity" [disabled]="!cities.length">
       <option class="hidden" value="" selected>{{ "forms.select.cities.placeholder" | translate }}</option>
       @for (item of cities; track $index) {
-        <option [value]="item.name">{{ "cities." + item.translationKey | translate }}</option>
+        <option [value]="item.idCity">{{ item.commonName }}</option>
       }
     </select>
   </div>
   <div class="flex justify-end mt-4">
-    <button class="primary" (click)="navigate()">{{ "common.next" | translate }}</button>
+    <button class="primary" (click)="navigate()" [disabled]="isDisabled">
+      {{ "common.next" | translate }}
+    </button>
   </div>
 </app-card>

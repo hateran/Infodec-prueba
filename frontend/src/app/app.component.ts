@@ -1,11 +1,13 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { NavigationEnd, Router, RouterOutlet } from "@angular/router";
 import { TranslateService, TranslateModule } from "@ngx-translate/core";
 import { StepsModule } from "primeng/steps";
 import { MenuComponent } from "./components";
 import { MenuItem } from "primeng/api";
-import { ROUTES_TO_HIDE_STEPPER, STEPPER_OPTIONS } from "./constants";
+import { ROUTES_TO_HIDE_STEPPER } from "./constants";
 import { RoutesEnum } from "./enums";
+import { StepService } from "./services/step.service";
+import { FormService } from "./pages/services/form.service";
 
 @Component({
   selector: "app-root",
@@ -19,9 +21,12 @@ export class AppComponent {
 
   public canBeRendered: boolean = false;
 
+  private readonly formService = inject(FormService);
+
   public constructor(
     private readonly translate: TranslateService,
     private readonly router: Router,
+    private readonly stepService: StepService,
   ) {
     this.translate.addLangs(["es", "de"]);
     this.translate.setDefaultLang("es");
@@ -35,6 +40,6 @@ export class AppComponent {
   }
 
   public get items(): MenuItem[] {
-    return STEPPER_OPTIONS;
+    return this.stepService.items;
   }
 }

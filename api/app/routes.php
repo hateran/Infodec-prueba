@@ -19,5 +19,15 @@ return function (App $app) {
             $group->get('', 'App\Controllers\HistoryController:list');
             $group->post('/create', 'App\Controllers\HistoryController:create');
         });
+
+        $group->group('/country', function (Group $group) {
+            $group->get('', 'App\Controllers\CountryController:list');
+            // $group->post('/create', 'App\Controllers\CountryController:create');
+        });
+
+        $group->group('/city', function (Group $group) {
+            $group->get('', 'App\Controllers\CityController:list');
+            // $group->post('/create', 'App\Controllers\CityController:create');
+        });
     });
 };
